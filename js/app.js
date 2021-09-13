@@ -18,7 +18,7 @@ const showProducts = (products) => {
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h5>${product.title.slice(0, 18)}</h5>
+      <h5>${product.title.slice(0, 20)}</h5>
       <p>Category: ${product.category}</p>
         <div class="d-flex justify-content-evenly">
         <p>Rate Avg: ${product.rating.rate}</p>
