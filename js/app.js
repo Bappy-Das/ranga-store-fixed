@@ -83,10 +83,6 @@ const getInputValue = (id) => {
 };
 //grandTotal update function
 const updateTotal = () => {
-  const pds = getInputValue("price")
-  const pcharge = getInputValue("delivery-charge")
-  const tax = getInputValue("total-tax")
-  console.log(tax)
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
