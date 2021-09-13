@@ -1,7 +1,9 @@
 body {
+  /* background-color: aliceblue; */
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+
 .search-field {
   border: none;
   border-radius: 50px;
@@ -36,14 +38,14 @@ body {
   justify-content: center;
 }
 .product{
-  margin: 10px;
+  margin: 15px;
 }
 .single-product {
   padding: 10px;
   transition: 0.6s;
 }
 .single-product:hover {
-  box-shadow: 4px 4px 7px gray;
+  box-shadow: 4px 4px 7px rgb(133, 132, 132);
   border-radius: 10px;
   border: 1px solid cyan;
 }
@@ -54,8 +56,9 @@ body {
 .cart {
   width: 350px;
   /* border: 1px solid green; */
+  background-color:#EDEDED;
   padding: 10px;
-  box-shadow: 10px 10px 20px gray;
+  box-shadow: 0px 10px 10px gray;
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
