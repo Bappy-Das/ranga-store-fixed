@@ -35,6 +35,9 @@ body {
   align-items: center;
   justify-content: center;
 }
+.product{
+  margin: 10px;
+}
 .single-product {
   padding: 10px;
   transition: 0.6s;
