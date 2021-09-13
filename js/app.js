@@ -20,11 +20,10 @@ const showProducts = (products) => {
       </div>
       <h5>${product.title.slice(0, 20)}</h5>
       <p>Category: ${product.category}</p>
-        <div class="d-flex justify-content-evenly">
-        <p>Rate Avg: ${product.rating.rate}</p>
-        <p>Rating: ${product.rating.count}</p>
-        </div>
-      
+      <div class="d-flex justify-content-evenly">
+          <p>Rate Avg: ${product.rating.rate}</p>
+          <p>Rating: ${product.rating.count}</p>
+      </div>
       <h5 class="mb-3">Price: $ ${product.price}</h5>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
@@ -32,6 +31,8 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// Add To cart onclick fuction
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -41,14 +42,10 @@ const addToCart = (id, price) => {
   updateTotal()
 };
 
-
-
 // main price update function
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
-  // console.log(convertPrice);
-
   const total = convertedOldPrice + convertPrice;
   document.getElementById(id).innerText = (total).toFixed(2);
 };
@@ -75,12 +72,13 @@ const updateTaxAndCharge = () => {
   }
 };
 
+// Get all the id
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
-  // const converted = parseInt(element);
   const converted = parseFloat(element);
   return converted;
 };
+
 //grandTotal update function
 const updateTotal = () => {
   const grandTotal =
